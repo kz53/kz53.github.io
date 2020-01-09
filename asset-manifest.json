@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kz53.github.io/static/css/main.d1b05096.chunk.css",
+    "main.js": "/kz53.github.io/static/js/main.84671acf.chunk.js",
+    "main.js.map": "/kz53.github.io/static/js/main.84671acf.chunk.js.map",
+    "runtime-main.js": "/kz53.github.io/static/js/runtime-main.216c2ac1.js",
+    "runtime-main.js.map": "/kz53.github.io/static/js/runtime-main.216c2ac1.js.map",
+    "static/js/2.b8159b50.chunk.js": "/kz53.github.io/static/js/2.b8159b50.chunk.js",
+    "static/js/2.b8159b50.chunk.js.map": "/kz53.github.io/static/js/2.b8159b50.chunk.js.map",
+    "index.html": "/kz53.github.io/index.html",
+    "precache-manifest.ed1c1e27f8cbea95d47820d84a47040d.js": "/kz53.github.io/precache-manifest.ed1c1e27f8cbea95d47820d84a47040d.js",
+    "service-worker.js": "/kz53.github.io/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/kz53.github.io/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.b8159b50.chunk.js.LICENSE": "/kz53.github.io/static/js/2.b8159b50.chunk.js.LICENSE",
+    "static/media/logo.svg": "/kz53.github.io/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.216c2ac1.js",
+    "static/js/2.b8159b50.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.84671acf.chunk.js"
+  ]
+}
