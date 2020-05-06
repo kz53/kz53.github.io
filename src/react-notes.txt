@@ -1,1 +1,11 @@
 react libraries usually 2 spaces
+
+git reset --hard <SHA>
+git push --force origin master
+
+switch to source
+npm run deploy
+DO NOT TOUCH MASTER
+
+https://stackoverflow.com/questions/17667023/git-how-to-reset-origin-master-to-a-commit
+https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka
