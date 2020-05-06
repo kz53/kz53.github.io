@@ -4,8 +4,9 @@ import './App.css';
 import './styles.css';
 import scrollToComponent from 'react-scroll-to-component';
 import image01 from './assets/profile-pic.jpg';
+import TopBar from './topbar/TopBar.js';
 
-function ScrolToButton(props) {
+function ScrollToButton(props) {
   return (
     <button className="square" onClick={props.onClick}>
       {props.value}
@@ -20,32 +21,24 @@ class App extends React.Component {
     this.aboutRef = createRef();
     this.projectRef = createRef();
     this.contactRef = createRef();
-  }
-
-  SmoothVerticalScrolling(e, time, where) {
-    var eTop = e.getBoundingClientRect().top;
-    var eAmt = eTop / 100;
-    var curTime = 0;
-    while (curTime <= time) {
-      window.setTimeout(this.SVS_B, curTime, eAmt, where);
-      curTime += time / 100;
-    }
-  }
-
-  SVS_B(eAmt, where) {
-    if(where == "center" || where == "")
-      window.scrollBy(0, eAmt / 2);
-    if (where == "top")
-      window.scrollBy(0, eAmt);
+    this.refsList = [this.homeRef, this.aboutRef, this.projectRef, this.contactRef];
   }
 
   render () {
     return (
       <div className="App">
-        <div  ref={this.homeRef} id="home" className="my-border my-section" >
+        <TopBar refsList={this.refsList} />
+        <nav id="sidebar" >
+          <ol>
+            <li>Re</li>
+            <li>Pro</li>
+            <li>Con</li>
+          </ol>
+        </nav> 
+        <section ref={this.homeRef} id="home" className="my-border my-section " >
           Hello! My name is <b>Kel Zhang</b>. I'm a creative, curious web developer.
           <div onClick={()=>{this.SmoothVerticalScrolling(this.homeRef.current, 275, "top")}} style={{backgroundColor: 'aqua'}} >Hire Me</div>
-          <div onClick={()=>{this.SmoothVerticalScrolling(this.aboutRef.current, 275, "top")}} style={{backgroundColor: 'magenta'}}>View my work</div>
+          <div onClick={()=>{this.SmoothVerticalScrzolling(this.aboutRef.current, 275, "top")}} style={{backgroundColor: 'magenta'}}>View my work</div>
           <br />
           <img className="circular" src={image01} />
           <button
@@ -54,31 +47,14 @@ class App extends React.Component {
               // this.contactRef.current.scrollIntoView({ behavior: 'smooth' });
               this.SmoothVerticalScrolling(this.contactRef.current, 275, "top");
             }}
-          >
+          > 
             Cliquez moi SVP!
           </button>
           <br />
-          <nav className="navbar" style={{position: 'fixed'}} >
-            <a href="#" className="logo">logo</a>
-            <ul className="main-nav" id="js-menu">
-              <li>
-                <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.homeRef.current, 275, "top")}}>Home</div>
-              </li>
-              <li>
-                <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.aboutRef.current, 275, "top"))}}>About</div>
-              </li>
-              <li>
-                <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.projectRef.current, 275, "top")}}>Projects</div>
-              </li>
-              <li>
-                <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.contactRef.current, 275, "top")}}>Contact</div>
-              </li>
-              <li>
-                <a href="#blog" className="nav-links">Blog</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <div className="my-bg" style={{height: 500+"px"}}>
+            aa
+          </div>
+         </section>
       
         <div className="parallax"></div>
         
@@ -152,24 +128,29 @@ class App extends React.Component {
                 <li>Redesigned parts of the company website to improve UI/UX and used appJar Python framework to create user friendly GUIs </li>
                 <li>Optimized SQL queries to significantly improve database response time</li>
               </ul>
-            <h4>Projects</h4>
           </div>      
         </section>
 
         {/* <!-- Projects --> */}
         <section ref={this.projectRef} id="projects" className="my-border my-section">
-            <div>
-                <b>Projects</b>
-            </div>
+          <div className="section">
+            <b>Projects</b>
+          </div>
+          <div className="my-bg" style={{height: 500+"px"}}>
+            aa
+          </div>
         </section>
 
         {/* <!-- Contact --> */}
         <section ref={this.contactRef} id="contact" className="my-border my-section">
           <div>
-              <p><strong>Connect With Me</strong></p>
-              E-mail: kz53@cornell.edu
-              LinkedIn: 
-              Download CV
+            <p><strong>Connect With Me</strong></p>
+            E-mail: kz53@cornell.edu
+            LinkedIn: 
+            Download CV
+            <div className="my-bg" style={{height: 500+"px"}}>
+              aa
+            </div>
           </div>
         </section>
       </div>
