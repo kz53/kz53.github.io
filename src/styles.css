@@ -4,6 +4,20 @@
     margin: 0;
 }
 
+.fade-in-section {
+    opacity: 0; 
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6S ease-out, transform 1.2s ease-out;
+    will-change: opacity, visiblity;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
 .parallax {
     /* The image used */
     background-image: url("./assets/stars.jpeg");
@@ -18,7 +32,7 @@
 }
 
 .my-bg {
-    background-color: #ffffff;
+    background-color: #fffbbb;
 }
 
 .my-demo {

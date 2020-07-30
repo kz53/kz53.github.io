@@ -54,7 +54,7 @@ class App extends React.Component {
           <div className="my-bg" style={{height: 500+"px"}}>
             aa
           </div>
-         </section>
+        </section>
       
         <div className="parallax"></div>
         

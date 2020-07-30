@@ -9,3 +9,8 @@ DO NOT TOUCH MASTER
 
 https://stackoverflow.com/questions/17667023/git-how-to-reset-origin-master-to-a-commit
 https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka
+
+
+---------------------------------
+Fade In CSS:
+https://www.selbekk.io/blog/2019/08/how-to-fade-in-content-as-it-scrolls-into-view/
