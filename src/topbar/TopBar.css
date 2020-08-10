@@ -1,17 +1,37 @@
+@keyframes popDown {
+  0% {
+    transform: translateY(-100px);
+  }
+}
+
 .topbar{
-    position: fixed;
-    height:40px;
-    left:0;
-    top:0;
-    background-color: #fff;
-    color: red;
-    width:100%;
-    text-align:center;
-    font-size:22px;
-    box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
-    transition:top .3s;
-  }
-  
-  .hide{
-    top:-80px
-  }
+  left:0;
+  height: 10vh;
+  background-color: #fff;
+  width:100%;
+  text-align:center;
+  font-size:22px;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
+  transition: top .3s;
+  z-index: 1;
+}
+
+.non-stick{
+  position: absolute;
+  bottom: -10vh;
+}
+
+.stick-top{
+  position: fixed;
+  top:0vh;
+  animation: popDown .75s;
+}
+
+.navbar {
+  font-size: 18px;
+  height:10vh;  
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 10px;
+  bottom: 0px;
+}

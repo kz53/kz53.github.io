@@ -4,7 +4,9 @@ import './App.css';
 import './styles.css';
 import scrollToComponent from 'react-scroll-to-component';
 import image01 from './assets/profile-pic.jpg';
-import TopBar from './topbar/TopBar.js';
+import TopBar from './TopBar/TopBar.js';
+import NavBar from './NavBar/NavBar.js';
+import HexItem from './hex-item/hex-item.js';
 
 function ScrollToButton(props) {
   return (
@@ -15,6 +17,28 @@ function ScrollToButton(props) {
 }
 
 class App extends React.Component {
+  items = [
+    {
+      img:image01,
+      title:"Fast",
+      text:"Fast load times and lag free interaction, my highest priority",
+    },
+    {
+      img:image01,
+      title:"Responsive",
+      text:"My layouts will work on any device, big or small",
+    },
+    {
+      img:image01,
+      title:"Intuitive",
+      text:"Strong preference for easy to use, intuitive UX/UI",
+    },
+    {
+      img:image01,
+      title:"Dynamic",
+      text:"Websites done have to be static, I love making ebsites come to life!",
+    }
+  ]
   constructor(props) {
     super(props);
     this.homeRef = createRef();
@@ -24,42 +48,52 @@ class App extends React.Component {
     this.refsList = [this.homeRef, this.aboutRef, this.projectRef, this.contactRef];
   }
 
+  smoothVerticalScrolling(e, time, where) {
+    var eTop = e.getBoundingClientRect().top;
+    var eAmt = eTop / 100;
+    var curTime = 0;
+    while (curTime <= time) {
+      window.setTimeout(this.SVS_B, curTime, eAmt, where);
+      curTime += time / 100;
+    }
+  }
+
+  SVS_B(eAmt, where) {
+    if(where == "center" || where == "")
+      window.scrollBy(0, eAmt / 2);
+    if (where == "top")
+      window.scrollBy(0, eAmt);
+  }
+
   render () {
     return (
       <div className="App">
-        <TopBar refsList={this.refsList} />
-        <nav id="sidebar" >
-          <ol>
-            <li>Re</li>
-            <li>Pro</li>
-            <li>Con</li>
-          </ol>
-        </nav> 
-        <section ref={this.homeRef} id="home" className="my-border my-section " >
+        <section ref={this.homeRef} id="home" className="my-section " >
           Hello! My name is <b>Kel Zhang</b>. I'm a creative, curious web developer.
-          <div onClick={()=>{this.SmoothVerticalScrolling(this.homeRef.current, 275, "top")}} style={{backgroundColor: 'aqua'}} >Hire Me</div>
-          <div onClick={()=>{this.SmoothVerticalScrzolling(this.aboutRef.current, 275, "top")}} style={{backgroundColor: 'magenta'}}>View my work</div>
           <br />
           <img className="circular" src={image01} />
-          <button
-            onClick={() => {
-              console.log("scroll");  
-              // this.contactRef.current.scrollIntoView({ behavior: 'smooth' });
-              this.SmoothVerticalScrolling(this.contactRef.current, 275, "top");
-            }}
-          > 
-            Cliquez moi SVP!
-          </button>
+          <div onClick={()=>{this.smoothVerticalScrolling(this.aboutRef.current, 275, "top")}} style={{backgroundColor: 'aqua'}} >Get To Know Me</div>
           <br />
-          <div className="my-bg" style={{height: 500+"px"}}>
-            aa
-          </div>
+          {/* <div id="landing-navbar" className="landing-navbar">
+          </div>  */}
+          {/* <TopBar refsList={this.refsList} /> */}
         </section>
       
-        <div className="parallax"></div>
         
         {/* <!-- Resume --> */}
-        <section ref={this.aboutRef} id="about" className="my-border my-section">
+        <section ref={this.aboutRef} id="about" className="my-section">
+        <br/>
+          <br/>          <br/>
+          <br/>          <br/>
+          <br/>          <br/>
+          <br/>
+          <h2>About</h2>
+          <div className="items-row">
+            <HexItem data={this.items[0]}></HexItem>
+            <HexItem data={this.items[1]}></HexItem>
+            <HexItem data={this.items[2]}></HexItem>
+            <HexItem data={this.items[3]}></HexItem>
+          </div>
           <b>Resume</b>
           <div>
             <ul>
@@ -132,17 +166,16 @@ class App extends React.Component {
         </section>
 
         {/* <!-- Projects --> */}
-        <section ref={this.projectRef} id="projects" className="my-border my-section">
-          <div className="section">
-            <b>Projects</b>
-          </div>
+        <section ref={this.projectRef} id="projects" className="my-section">
+          <h2>Projects</h2>
           <div className="my-bg" style={{height: 500+"px"}}>
             aa
           </div>
         </section>
 
         {/* <!-- Contact --> */}
-        <section ref={this.contactRef} id="contact" className="my-border my-section">
+        <section ref={this.contactRef} id="contact" className="my-section">
+          <h2>Contact</h2>
           <div>
             <p><strong>Connect With Me</strong></p>
             E-mail: kz53@cornell.edu

@@ -1,5 +1,9 @@
+section{
+  height: 110vh;
+}
 .App {
   text-align: center;
+  width: 100%;
 }
 
 .App-logo {

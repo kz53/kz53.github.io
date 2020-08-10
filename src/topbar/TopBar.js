@@ -1,21 +1,30 @@
-import React, { createRef } from 'react';
+import React from 'react';
 import './TopBar.css';
 
 export default class TopBar extends React.Component {
   constructor(props) {
     super(props);
-    console.log(this.props.refsList);
+    let prev = 0;
   }
 
-  state = { isHide: false };
+  state = { stickTop: true };
 
   hideBar = () => {
-    const { isHide } = this.state
-    window.scrollY < 500 ?
-    !isHide && this.setState({ isHide: true })
-    :
-    isHide && this.setState({ isHide: false });
-    this.prev = window.scrollY;
+    const { stickTop } = this.state;
+    console.log("window", window.scrollY)
+    console.log("prev", this.prev)
+    if (window.scrollY > this.prev){
+      window.scrollY < document.documentElement.clientHeight*1.1 ?
+      console.log("")
+      :
+      stickTop && this.setState({ stickTop: false });
+    } else {
+      window.scrollY < document.documentElement.clientHeight ?
+      !stickTop && this.setState({ stickTop: true })
+      :
+      console.log("");
+    }
+    this.prev = window.scrollY;    
   }
 
   componentDidMount(){
@@ -44,7 +53,8 @@ export default class TopBar extends React.Component {
   }
   
   render(){
-    const classHide = this.state.isHide ? 'hide' : '';
+    const classHide = this.state.stickTop ? 'non-stick' : 'stick-top';
+    // const classHide = this.state.stickTop ? 'stick-top' : 'non-stick';
     return (
       <div className={`topbar ${classHide}`}>
         <nav className="navbar" >
@@ -61,9 +71,6 @@ export default class TopBar extends React.Component {
             </li>
             <li>
               <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[3].current, 275, "top")}}>Contact</div>
-            </li>
-            <li>
-              <a href="#blog" className="nav-links">Blog</a>
             </li>
           </ul>
         </nav>
