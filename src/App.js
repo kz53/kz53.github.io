@@ -76,7 +76,7 @@ class App extends React.Component {
           <br />
           {/* <div id="landing-navbar" className="landing-navbar">
           </div>  */}
-          {/* <TopBar refsList={this.refsList} /> */}
+          <TopBar refsList={this.refsList} />
         </section>
       
         
