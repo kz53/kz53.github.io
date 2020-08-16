@@ -4,16 +4,23 @@
   }
 }
 
+@keyframes popUp {
+  100% {
+    transform: translateY(-100px);
+  }
+}
+
 .topbar{
   left:0;
-  height: 10vh;
+  height: 8vh;
+  min-height: 50px;
   background-color: #fff;
   width:100%;
   text-align:center;
   font-size:22px;
   box-shadow: 0px 4px 4px rgba(0,0,0,0.2);
   transition: top .3s;
-  z-index: 1;
+  z-index: 10;
 }
 
 .non-stick{
@@ -27,11 +34,114 @@
   animation: popDown .75s;
 }
 
+/* Navbar Styling */
 .navbar {
   font-size: 18px;
-  height:10vh;  
+  height:100%;  
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 10px;
   bottom: 0px;
+  z-index: 5;
+}
+.link-wrap {
+  list-style-type: none;
+  display: none;
+}
+
+.link-wrap li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+}                   
+.logo {
+  display: none;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.hb-show{
+  display: block;
+  height: 100px;
+  transition: height .75s;
+}
+
+.hb-hide{
+  display: block;
+  height: 0px;
+  transition: height .75s;
+}
+
+
+.hb-button {
+  display: block;
+}
+
+.hb-menu {
+  display: block;
+  background-color: gray;
+  animation: popDown;
+  z-index: -1;
+  overflow: hidden;
+}  
+
+.hb-menu-close {
+  display: block;
+  background-color: gray;
+  animation: popDown;
+  z-index: -1;
+  height: 0px;
+  transition: 2s;
+}  
+
+@media screen and (min-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    position: static;
+    bottom: 0;
+    right: 0;
+  }
+  .link-wrap {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .link-wrap li {
+    margin: 0;
+  }
+  .nav-links {
+    margin-left: 40px;
+  }
+  .nav-links, .logo{
+    display: block;
+  }
+
+  .logo {
+    margin-top: 0;
+   }
+  /* .navbar-toggle {
+    display: none;
+  } */
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+  .hb-button {
+    display: none;
+  }
+  .hb-menu {
+    display: none;
+  }  
 }

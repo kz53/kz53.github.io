@@ -72,7 +72,9 @@ class App extends React.Component {
           Hello! My name is <b>Kel Zhang</b>. I'm a creative, curious web developer.
           <br />
           <img className="circular" src={image01} />
-          <div onClick={()=>{this.smoothVerticalScrolling(this.aboutRef.current, 275, "top")}} style={{backgroundColor: 'aqua'}} >Get To Know Me</div>
+          <div className="landing-btn" onClick={()=>{this.smoothVerticalScrolling(this.aboutRef.current, 275, "top")}} >
+            Get To Know Me
+          </div>
           <br />
           {/* <div id="landing-navbar" className="landing-navbar">
           </div>  */}
@@ -82,17 +84,12 @@ class App extends React.Component {
         
         {/* <!-- Resume --> */}
         <section ref={this.aboutRef} id="about" className="my-section">
-        <br/>
-          <br/>          <br/>
-          <br/>          <br/>
-          <br/>          <br/>
-          <br/>
           <h2>About</h2>
           <div className="items-row">
             <HexItem data={this.items[0]}></HexItem>
-            <HexItem data={this.items[1]}></HexItem>
-            <HexItem data={this.items[2]}></HexItem>
-            <HexItem data={this.items[3]}></HexItem>
+            {/* <HexItem data={this.items[1]}></HexItem> */}
+            {/* <HexItem data={this.items[2]}></HexItem>
+            <HexItem data={this.items[3]}></HexItem> */}
           </div>
           <b>Resume</b>
           <div>
@@ -168,9 +165,14 @@ class App extends React.Component {
         {/* <!-- Projects --> */}
         <section ref={this.projectRef} id="projects" className="my-section">
           <h2>Projects</h2>
-          <div className="my-bg" style={{height: 500+"px"}}>
+          <div className="" style={{height: 500+"px"}}>
             aa
           </div>
+          a
+          <br/>
+          <br/>
+          <br/>
+          <br/>
         </section>
 
         {/* <!-- Contact --> */}
@@ -181,7 +183,7 @@ class App extends React.Component {
             E-mail: kz53@cornell.edu
             LinkedIn: 
             Download CV
-            <div className="my-bg" style={{height: 500+"px"}}>
+            <div className="" style={{height: 500+"px"}}>
               aa
             </div>
           </div>
