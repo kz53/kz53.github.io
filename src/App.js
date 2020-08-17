@@ -46,6 +46,9 @@ class App extends React.Component {
     this.projectRef = createRef();
     this.contactRef = createRef();
     this.refsList = [this.homeRef, this.aboutRef, this.projectRef, this.contactRef];
+    this.state = {
+      reachAbout: false,
+    };
   }
 
   smoothVerticalScrolling(e, time, where) {
@@ -65,6 +68,15 @@ class App extends React.Component {
       window.scrollBy(0, eAmt);
   }
 
+  
+  componentDidMount(){
+    window.addEventListener('scroll', () => {
+      if(window.scrollY >= 400){
+        this.setState({ reachAbout: true, });
+      }
+    }); 
+  }
+  
   render () {
     return (
       <div className="App">
@@ -83,8 +95,8 @@ class App extends React.Component {
       
         
         {/* <!-- Resume --> */}
-        <section ref={this.aboutRef} id="about" className="my-section">
-          <h2>About</h2>
+        <section ref={this.aboutRef} id="about" className={`my-section `}>
+          <h2 className={`${this.state.reachAbout ?'slide':'hide'}`}>About</h2>
           <div className="items-row">
             <HexItem data={this.items[0]}></HexItem>
             {/* <HexItem data={this.items[1]}></HexItem> */}

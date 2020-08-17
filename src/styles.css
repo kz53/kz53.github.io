@@ -15,6 +15,7 @@
   }
 }
 
+
 body {
   font-family: 'Josefin Sans', sans-serif;
   color: #333333;    
@@ -29,16 +30,28 @@ p {
 h1, h2, h3, h4, h5, h6 {
   font-family: ;
   color: black;
-  animation: slideFromLeft .75s;
+  
 }
 
+h2{
+  font-size: 50px;
+}
+.hide{
+  visibility: hidden;;
+}
+
+.slide{
+  animation: slideFromLeft 1.0s;
+}
 section {
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 #home{
   z-index: 2;
   background-color: gray;
+  height: 100vh;
+  margin-bottom: 120px;
 }
 
 #about, #contact  {
