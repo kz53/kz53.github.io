@@ -70,13 +70,13 @@
 .hb-show{
   display: block;
   height: 100px;
-  transition: height .75s;
+  transition: height .25s;
 }
 
 .hb-hide{
   display: block;
   height: 0px;
-  transition: height .75s;
+  transition: height .25s;
 }
 
 

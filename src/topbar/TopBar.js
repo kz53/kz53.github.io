@@ -41,9 +41,10 @@ export default class TopBar extends React.Component {
 
   SmoothVerticalScrolling(e, time, where) {
     this.setState({showMenu: false});
-    var eTop = e.getBoundingClientRect().top;
-    console.log("aa", eTop);
-    window.scrollBy(0, eTop);
+    e.scrollIntoView({behavior: "smooth"})
+    // var eTop = e.getBoundingClientRect().top;
+    // console.log("aa", eTop);
+    // window.scrollBy(0, eTop);
     // var eAmt = eTop / 60;
     // // eAmt = eAmt > 1 ? eAmt : 1; 
     // console.log("cc", eAmt);
