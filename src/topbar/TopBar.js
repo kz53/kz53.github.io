@@ -43,20 +43,19 @@ export default class TopBar extends React.Component {
     this.setState({showMenu: false});
     var eTop = e.getBoundingClientRect().top;
     console.log("aa", eTop);
-    var eAmt = eTop / 60;
-    // eAmt = eAmt > 1 ? eAmt : 1; 
-    console.log("cc", eAmt);
+    window.scrollBy(0, eTop);
+    // var eAmt = eTop / 60;
+    // // eAmt = eAmt > 1 ? eAmt : 1; 
+    // console.log("cc", eAmt);
 
 
-    var curTime = 0;
-    var scrollAmt = 0;
-    while (curTime < time) {
-      window.setTimeout(this.SVS_B, curTime, eAmt, where);
-      curTime += time / 60;
-      scrollAmt+=eAmt
-    }
-
-    console.log("total", scrollAmt);
+    // var curTime = 0;
+    // var scrollAmt = 0;
+    // while (curTime < time) {
+    //   window.setTimeout(this.SVS_B, curTime, eAmt, where);
+    //   curTime += time / 60;
+    //   scrollAmt+=eAmt
+    // }
 
   }
 
