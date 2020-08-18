@@ -7,6 +7,7 @@ import image01 from './assets/profile-pic.jpg';
 import TopBar from './TopBar/TopBar.js';
 import NavBar from './NavBar/NavBar.js';
 import HexItem from './hex-item/hex-item.js';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function ScrollToButton(props) {
   return (
