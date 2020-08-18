@@ -9,6 +9,8 @@ import NavBar from './NavBar/NavBar.js';
 import HexItem from './hex-item/hex-item.js';
 import smoothscroll from 'smoothscroll-polyfill';
 
+smoothscroll.polyfill();
+
 function ScrollToButton(props) {
   return (
     <button className="square" onClick={props.onClick}>
