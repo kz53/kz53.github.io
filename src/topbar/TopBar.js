@@ -10,10 +10,10 @@ export default class TopBar extends React.Component {
     let prev = 0;
     this.state = { 
       // stickTop: false, 
-      stickTop: window.scrollY>590?true:false, 
+      stickTop: this.checkIfMobile() || window.scrollY>document.documentElement.clientHeight?true:false, 
       showMenu: false, 
     };
-    console.log("y", window.scrollY)
+    this.checkIfMobile();
   }
 
   
@@ -22,7 +22,7 @@ export default class TopBar extends React.Component {
 
     //if scroll down
 
-    if(window.scrollY > document.documentElement.clientHeight+50){
+    if(this.checkIfMobile() || window.scrollY > document.documentElement.clientHeight+50){
       this.setState({ stickTop: true })
 
     //scroll up
@@ -79,10 +79,10 @@ export default class TopBar extends React.Component {
 
   checkIfMobile(){
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      console.log("true");
+      console.log("mobile true");
       return true;
     }
-    console.log("true");
+    console.log("mobile false");
     return false;
   }
 
@@ -91,7 +91,7 @@ export default class TopBar extends React.Component {
     const showMenu = this.state.showMenu ? 'hb-show' : 'hb-hide';
     // const classHide = this.state.stickTop ? 'stick-top' : 'non-stick';
     return (
-      <div className={`topbar ${classHide}`}>
+      <div className={`topbar ${classHide}`} style={{animation: this.checkIfMobile()?"none":""}}>
         <nav className="navbar" >
           <a href="#" className="logo">the logo</a>
           <div className="hb-button" onClick={()=>{this.toggleMenu()}}>Menu</div>
