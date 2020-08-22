@@ -1,5 +1,8 @@
 import React from 'react';
 import './TopBar.css';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 export default class TopBar extends React.Component {
   constructor(props) {

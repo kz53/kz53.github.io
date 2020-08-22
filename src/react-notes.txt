@@ -8,6 +8,78 @@ git push --force origin master
 3. npm run deploy
 DO NOT TOUCH MASTER
 
+
+<section>
+    HOME
+</section>
+<section>
+    <h2 "section-header"></h2> 
+    <div>
+        <div>
+            default content 
+        </div>
+
+        <div>
+            <h4></h4>
+            content goes here
+        </div>
+    </div>
+</section>
+<section>
+    <h2 "section-header"></h2> 
+    <div>
+        <div>
+            default content 
+        </div>
+
+        <div>
+            <h4></h4>
+            content goes here
+        </div>
+    </div>
+</section>
+<section>
+    <h2 "section-header"></h2> 
+    <div>
+        <div>
+            default content 
+        </div>
+
+        <div>
+            <h4></h4>
+            content goes here
+        </div>
+    </div>
+</section>
+
+<h4>Work Experience</h4>
+              <h5>SKF</h5>
+              Jr. Fullstack Developer, Lansdale PA
+              <ul>
+                <li>Created a platform to combine multiple content portals into a single service while ensuring ability to scale and host future applications</li>
+                <li>Worked with Amazon Web Services to build microservices for a serverless architecture</li>
+                <li>Used Angular, Bootstrap, and Material Design to make beautiful, responsive multimedia experiences</li>
+                <li>Designed mockups and favicons in GIMP while ensuring that they conform to identity standards</li>
+                <li>Created data visualizations with vanilla JavaScript animations and D3.js library</li>
+                <li>Created a pipeline for deploying code to Node Lambda environment </li>
+                <li>Tutored and assisted in onboarding of new team members to Angular/Node environment</li>
+              </ul>
+              <h5>Freelance Web Development</h5>
+              Consultant
+              <ul>
+                <li>Developed CRUD web application for a client using PHP (CodeIgniter)</li>
+                <li>Created REST API from scratch within a Lambda environment</li>
+                <li>Rewrote existing code to Angular and improved response times from more than 10 seconds to less than 3	</li>
+                <li>Built authentication piece that integrates with AWS Cognito and Microsoft Active Directory to provide secure login functionality</li>
+              </ul>
+              <h5>Frontage Laboratories</h5>
+              Intern
+              <ul>
+                <li>Developed multiple Python apps for researchers to pipeline data to databases</li>
+                <li>Redesigned parts of the company website to improve UI/UX and used appJar Python framework to create user friendly GUIs </li>
+                <li>Optimized SQL queries to significantly improve database response time</li>
+              </ul> 
+              
 https://stackoverflow.com/questions/17667023/git-how-to-reset-origin-master-to-a-commit
 https://dev.to/javascripterika/deploy-a-react-app-as-a-github-user-page-with-yarn-3fka
 

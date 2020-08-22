@@ -4,17 +4,31 @@
     margin: 0;
 }
 
+@keyframes fade-in {
+  0% {
+    transform: scale(.7,.7);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @keyframes slideFromLeft {
   0% {
     transform: translateX(-300px);
     opacity: 0;
   }
+ 
   100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
+.fade-in-element {
+
+}
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -36,22 +50,24 @@ h1, h2, h3, h4, h5, h6 {
 h2{
   font-size: 50px;
 }
-.hide{
-  visibility: hidden;;
+.hidden{
+  visibility: hidden;
 }
 
 .slide{
-  animation: slideFromLeft 1.0s;
+  animation: fade-in 1.0s;
 }
+
 section {
-  padding-top: 100px;
+  padding-top: 75px;
+  padding-bottom: 75px;
 }
 
 #home{
   z-index: 2;
   background-color: gray;
   height: 100vh;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
 }
 
 #about, #contact  {
@@ -63,6 +79,7 @@ section {
 }
 
 .landing-btn {
+  /* background-color: darkgray; */
   background-color: darkgray;
   height: 50px;
   width: 70px; 

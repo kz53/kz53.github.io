@@ -73,11 +73,26 @@ class App extends React.Component {
 
   
   componentDidMount(){
+    let elements = document.querySelectorAll('.hidden');
+    let windowHeight = window.innerHeight;
+    console.log(elements);
+
     window.addEventListener('scroll', () => {
-      if(window.scrollY >= 400){
-        this.setState({ reachAbout: true, });
+      for (let i = 0; i < elements.length; i++) {
+        let element = elements[i];
+        let positionFromTop = elements[i].getBoundingClientRect().top;
+  
+        if (positionFromTop - (windowHeight*.75) <= 0) {
+          element.classList.add('slide');
+          element.classList.remove('hidden');
+        }
       }
     }); 
+
+    window.addEventListener('resize', ()=>{
+      elements = document.querySelectorAll('.hidden');
+      windowHeight = window.innerHeight;
+    })
   }
   
   render () {
@@ -99,25 +114,15 @@ class App extends React.Component {
         
         {/* <!-- Resume --> */}
         <section ref={this.aboutRef} id="about" className={`my-section `}>
-          <h2 className={`${this.state.reachAbout ?'slide':'hide'}`}>About</h2>
-          <div className="items-row">
+          <h2 className='hidden'>About</h2>
+          <div className="hidden items-row">
             <HexItem data={this.items[0]}></HexItem>
             {/* <HexItem data={this.items[1]}></HexItem> */}
             {/* <HexItem data={this.items[2]}></HexItem>
             <HexItem data={this.items[3]}></HexItem> */}
           </div>
           <b>Resume</b>
-          <div>
-            <ul>
-              {/* <li>Angular</li>
-              <li>React</li>
-              <li>CSS</li>
-              <li>Semantic HTML</li> */}
-              <li>Fast</li>
-              <li>Responsive</li>
-              <li>Intuitive</li>
-              <li>Dynamic</li>
-            </ul>
+          <div className="hidden">
             <h4>Languages</h4>
             <ul>
               <li>Python</li>
@@ -146,41 +151,14 @@ class App extends React.Component {
               <li>JQuery</li>
               <li>Cordova</li>
               <li>AWS</li>      
-            </ul>
-            <h4>Work Experience</h4>
-              <h5>SKF</h5>
-              Jr. Fullstack Developer, Lansdale PA
-              <ul>
-                <li>Created a platform to combine multiple content portals into a single service while ensuring ability to scale and host future applications</li>
-                <li>Worked with Amazon Web Services to build microservices for a serverless architecture</li>
-                <li>Used Angular, Bootstrap, and Material Design to make beautiful, responsive multimedia experiences</li>
-                <li>Designed mockups and favicons in GIMP while ensuring that they conform to identity standards</li>
-                <li>Created data visualizations with vanilla JavaScript animations and D3.js library</li>
-                <li>Created a pipeline for deploying code to Node Lambda environment </li>
-                <li>Tutored and assisted in onboarding of new team members to Angular/Node environment</li>
-              </ul>
-              <h5>Freelance Web Development</h5>
-              Consultant
-              <ul>
-                <li>Developed CRUD web application for a client using PHP (CodeIgniter)</li>
-                <li>Created REST API from scratch within a Lambda environment</li>
-                <li>Rewrote existing code to Angular and improved response times from more than 10 seconds to less than 3	</li>
-                <li>Built authentication piece that integrates with AWS Cognito and Microsoft Active Directory to provide secure login functionality</li>
-              </ul>
-              <h5>Frontage Laboratories</h5>
-              Intern
-              <ul>
-                <li>Developed multiple Python apps for researchers to pipeline data to databases</li>
-                <li>Redesigned parts of the company website to improve UI/UX and used appJar Python framework to create user friendly GUIs </li>
-                <li>Optimized SQL queries to significantly improve database response time</li>
-              </ul>
+            </ul> 
           </div>      
         </section>
 
         {/* <!-- Projects --> */}
         <section ref={this.projectRef} id="projects" className="my-section">
-          <h2>Projects</h2>
-          <div className="" style={{height: 500+"px"}}>
+          <h2 className="hidden">Projects</h2>
+          <div className="hidden " style={{height: 500+"px"}}>
             aa
           </div>
           a
@@ -192,8 +170,8 @@ class App extends React.Component {
 
         {/* <!-- Contact --> */}
         <section ref={this.contactRef} id="contact" className="my-section">
-          <h2>Contact</h2>
-          <div>
+          <h2 className="hidden">Contact</h2>
+          <div className="hidden ">
             <p><strong>Connect With Me</strong></p>
             E-mail: kz53@cornell.edu
             LinkedIn: 
