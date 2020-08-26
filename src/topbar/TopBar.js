@@ -93,22 +93,26 @@ export default class TopBar extends React.Component {
     return (
       <div className={`topbar ${classHide}`} style={{animation: this.checkIfMobile()?"none":""}}>
         <nav className="navbar" >
-          <a href="#" className="logo">the logo</a>
           <div className="hb-button" onClick={()=>{this.toggleMenu()}}>Menu</div>
           <ul className="link-wrap" id="js-menu">
             <li>
-              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[0].current, 300, "top")}}>Home</div>
+              <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>Home</div>
             </li>
+            {/* <li>
+              <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>Resume</div>
+            </li> */}
             <li>
-              <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>About</div>
+              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[0].current, 300, "top")}}>Skills</div>
             </li>
             <li>
               <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[2].current, 300, "top")}}>Projects</div>
             </li>
             <li>
-              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[3].current, 300, "top")}}>Contact</div>
+              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[3].current, 300, "top")}}>Recruiters</div>
             </li>
+
           </ul>
+          {/* <a href="#" className="logo">the logo</a> */}
         </nav>
         <div className={`hb-menu ${showMenu}`}>
           <ul className="">

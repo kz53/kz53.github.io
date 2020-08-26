@@ -1,0 +1,9 @@
+.skill-item {
+  /* border: 1px solid gray; */
+  width: 300px;
+  margin: 10px;
+}
+
+.hidden{
+  visibility: hidden;
+}

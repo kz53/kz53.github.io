@@ -34,6 +34,9 @@ body {
   font-family: 'Josefin Sans', sans-serif;
   color: #333333;    
   background-color: rgba(255, 255, 255, 0.7);
+  min-width:280px;       
+  width: auto !important; 
+  width:280px;
 }
 
 p {
@@ -49,7 +52,9 @@ h1, h2, h3, h4, h5, h6 {
 
 h2{
   font-size: 50px;
+  margin-bottom: 50px;
 }
+
 .hidden{
   visibility: hidden;
 }
@@ -67,11 +72,13 @@ section {
   z-index: 2;
   background-color: gray;
   height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 75px;
+  overflow-y: hidden;
 }
 
 #about, #contact  {
   background-color: white;
+  height: 100vh;
 }
 
 #projects, #blog {
@@ -90,43 +97,60 @@ section {
 }
 
 .fade-in-section {
-    opacity: 0; 
-    transform: translateY(20vh);
-    visibility: hidden;
-    transition: opacity 0.6S ease-out, transform 1.2s ease-out;
-    will-change: opacity, visiblity;
+  opacity: 0; 
+  transform: translateY(20vh);
+  visibility: hidden;
+  transition: opacity 0.6S ease-out, transform 1.2s ease-out;
+  will-change: opacity, visiblity;
 }
 
 .fade-in-section.is-visible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 .parallax {
-    /* The image used */
-    background-image: url("./assets/stars.jpeg");
-    /* Full height */
-    height: 50px;
+  /* The image used */
+  background-image: url("./assets/stars.jpeg");
+  /* Full height */
+  height: 50px;
   
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
 .hero-title {
-    font-family: ;
-    color: ;
+  font-family: ;
+  color: ;
 }
 
 .hero-text {
-    font-family: ;
-    color: ;
+  font-family: ;
+  color: ;
 }
 
+.main-skill-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.extra-skill-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  border: 1px solid black;
+}
 
 .section {
     
@@ -167,9 +191,10 @@ section {
   display: flex;
 }
 
-.flex-vertical {
+.flex-vert {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .flex-wrap {
@@ -193,7 +218,7 @@ section {
 
 .flex-center {
   display: flex;
-  justify-content: center;
+  align-content: center;
 }
 
 /* trash */
@@ -224,7 +249,6 @@ section {
 
 .items-row {
   display: flex;
-  background-color: orange;
 }
 
 .landing-navbar {

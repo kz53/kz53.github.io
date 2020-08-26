@@ -5,9 +5,33 @@ import './styles.css';
 import scrollToComponent from 'react-scroll-to-component';
 import image01 from './assets/profile-pic.jpg';
 import TopBar from './TopBar/TopBar.js';
+import SkillItem from './SkillItem/SkillItem.js';
 import NavBar from './NavBar/NavBar.js';
 import HexItem from './hex-item/hex-item.js';
 import smoothscroll from 'smoothscroll-polyfill';
+
+//pictures
+import angularLogo from './assets/skill-icons/angular-logo.png';
+import awsLogo from './assets/skill-icons/aws-words.png';
+import bootstrapLogo from './assets/skill-icons/bootstrap-logo.png';
+import csharpLogo from './assets/skill-icons/csharp-logo.png';
+import cssLogo from './assets/skill-icons/css-logo.png';
+import d3Logo from './assets/skill-icons/d3-logo.png';
+import gitLogo from './assets/skill-icons/git-logo.png';
+import graphqlLogo from './assets/skill-icons/graphql-logo.png';
+import htmlLogo from './assets/skill-icons/html-logo.png';
+import javaLogo from './assets/skill-icons/java-logo.png';
+import jsLogo from './assets/skill-icons/js-logo.png';
+import mongodbLogo from './assets/skill-icons/mongodb-logo.png';
+import mysqlLogo from './assets/skill-icons/mysql-logo.png';
+import nodejsLogo from './assets/skill-icons/nodejs-logo.png';
+import pythonLogo from './assets/skill-icons/python-logo.png';
+import railsLogo from './assets/skill-icons/rails-logo.png';
+import reactLogo from './assets/skill-icons/react-logo.png';
+import reduxLogo from './assets/skill-icons/redux-logo.png';
+import rubyLogo from './assets/skill-icons/ruby-logo.png';
+import tensorflowLogo from './assets/skill-icons/tensorflow-logo.png';
+import tsLogo from './assets/skill-icons/ts-logo.png';
 
 smoothscroll.polyfill();
 
@@ -55,13 +79,7 @@ class App extends React.Component {
   }
 
   smoothVerticalScrolling(e, time, where) {
-    var eTop = e.getBoundingClientRect().top;
-    var eAmt = eTop / 100;
-    var curTime = 0;
-    while (curTime <= time) {
-      window.setTimeout(this.SVS_B, curTime, eAmt, where);
-      curTime += time / 100;
-    }
+    e.scrollIntoView({behavior: "smooth"})
   }
 
   SVS_B(eAmt, where) {
@@ -82,7 +100,7 @@ class App extends React.Component {
         let element = elements[i];
         let positionFromTop = elements[i].getBoundingClientRect().top;
   
-        if (positionFromTop - (windowHeight*.75) <= 0) {
+        if (positionFromTop - (windowHeight*.85) <= 0) {
           element.classList.add('slide');
           element.classList.remove('hidden');
         }
@@ -98,7 +116,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App">
-        <section ref={this.homeRef} id="home" className="my-section " >
+        <section ref={this.homeRef} id="home" className="flex-vert" >
           Hello! My name is <b>Kel Zhang</b>. I'm a creative, curious web developer.
           <br />
           <img className="circular" src={image01} />
@@ -113,8 +131,8 @@ class App extends React.Component {
         <TopBar refsList={this.refsList} />
         
         {/* <!-- Resume --> */}
-        <section ref={this.aboutRef} id="about" className={`my-section `}>
-          <h2 className='hidden'>About</h2>
+        <section ref={this.aboutRef} id="about" className={``}>
+          <h2 className='hidden'>About Me</h2>
           <div className="hidden items-row">
             <HexItem data={this.items[0]}></HexItem>
             {/* <HexItem data={this.items[1]}></HexItem> */}
@@ -123,40 +141,48 @@ class App extends React.Component {
           </div>
           <b>Resume</b>
           <div className="hidden">
-            <h4>Languages</h4>
-            <ul>
-              <li>Python</li>
-              <li>Ruby</li>
-              <li>JavaScript</li>
-              <li>Java</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>C#</li>
-              <li>Objective C</li>
-            </ul>
-            <h4>Technologies/Frameworks</h4>
-            <ul>
-              <li>Ruby on Rails</li>
-              <li>Angular</li>
-              <li>React.js</li>
-              <li>Redux</li>
-              <li>Django</li>
-              <li>Flask</li>
-              <li>Node.js</li>
-              <li>Git</li>
-              <li>GIMP/PhotoShop</li>
-              <li>Bootstrap</li>
-              <li>MSSQL Server</li> 
-              <li>Unix/Linux BASH</li>
-              <li>JQuery</li>
-              <li>Cordova</li>
-              <li>AWS</li>      
-            </ul> 
+            aa
           </div>      
         </section>
 
+        {/* <!-- Skills --> */}
+        <section ref={this.projectRef} id="projects" className="">
+          <h2 className="hidden">Technologies</h2>
+          <h4 className="hidden">My main skills are:</h4>
+          <div className="main-skill-row" >
+            <SkillItem className={"ggg hidden"} name="HTML" logo={htmlLogo} />
+            <SkillItem className={"ggg hidden"} name="CSS" logo={cssLogo} />
+            <SkillItem className={"ggg hidden"} name="JS" logo={jsLogo} />
+            <SkillItem className={"ggg hidden"} name="React" logo={reactLogo} />
+            <SkillItem className={"ggg hidden"} name="Angular" logo={angularLogo} />
+            <SkillItem className="hidden" name="MySQL" logo={mysqlLogo} />
+          </div>
+          <h4 className="hidden">I also have experience with:</h4>
+          <div className="extra-skill-row">
+            <SkillItem className="hidden" name="AWS" logo={awsLogo} />
+            <SkillItem className="hidden" name="Bootstrap" logo={bootstrapLogo} />
+            <SkillItem className="hidden" name="C#" logo={csharpLogo} />
+            <SkillItem className="hidden" name="D3" logo={d3Logo} />
+            <SkillItem className="hidden" name="Git" logo={gitLogo} />
+            <SkillItem className="hidden" name="GraphQL" logo={graphqlLogo} />
+            <SkillItem className="hidden" name="Java" logo={javaLogo} />
+            <SkillItem className="hidden" name="MongoDB" logo={mongodbLogo} />
+            <SkillItem className="hidden" name="Node.js" logo={nodejsLogo} />
+            <SkillItem className="hidden" name="Python" logo={pythonLogo} />
+            <SkillItem className="hidden" name="Redux" logo={reduxLogo} />
+            <SkillItem className="hidden" name="Ruby" logo={rubyLogo} />
+            <SkillItem className="hidden" name="Rails" logo={railsLogo} />
+            <SkillItem className="hidden" name="Tensorflow" logo={tensorflowLogo} />
+            <SkillItem className="hidden" name="TypeScript" logo={tsLogo} />
+          </div>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+        </section>
+
         {/* <!-- Projects --> */}
-        <section ref={this.projectRef} id="projects" className="my-section">
+        <section ref={this.projectRef} id="projects" className="">
           <h2 className="hidden">Projects</h2>
           <div className="hidden " style={{height: 500+"px"}}>
             aa
@@ -169,16 +195,25 @@ class App extends React.Component {
         </section>
 
         {/* <!-- Contact --> */}
-        <section ref={this.contactRef} id="contact" className="my-section">
+        <section ref={this.contactRef} id="contact" className="">
           <h2 className="hidden">Contact</h2>
           <div className="hidden ">
-            <p><strong>Connect With Me</strong></p>
-            E-mail: kz53@cornell.edu
-            LinkedIn: 
-            Download CV
-            <div className="" style={{height: 500+"px"}}>
-              aa
+            <div>
+              E-mail: kz53@cornell.edu
             </div>
+            <div>
+              LinkedIn: https://www.linkedin.com/in/kelzhang/
+            </div>
+            <div>
+              Github: https://github.com/kz53
+            </div>
+            <div>
+              Download CV
+            </div>
+          </div>
+          <div className="flex">
+            <button>View My Resume</button>
+            <button>Get In Touch</button>
           </div>
         </section>
       </div>

@@ -8,6 +8,10 @@ git push --force origin master
 3. npm run deploy
 DO NOT TOUCH MASTER
 
+https://ryanpotter.co.nz/
+https://mxstbr.com/
+https://www.lowmess.com/
+https://react-ladoli.netlify.app/ 
 
 <section>
     HOME
@@ -51,6 +55,28 @@ DO NOT TOUCH MASTER
         </div>
     </div>
 </section>
+
+
+About
+    A little aboupt me:
+        I am a full stack developer. I come with more than two years of prfessional experience. My passion lies in the ront ens site of things, and I have extensive experience with UI/UX design, frameworks liek React and Angular 2+.
+
+Skills
+    Main 
+    Languages
+    Framework
+
+Projects
+    Let's build some cool things :
+        Robin-bot
+        Meme- messanger
+        Ani-AI
+        SKF App Suite 
+
+Contact
+    LinkedIn
+    Mail
+    Github 
 
 <h4>Work Experience</h4>
               <h5>SKF</h5>
