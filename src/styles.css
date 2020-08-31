@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h2{
   font-size: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .hidden{
@@ -66,6 +66,7 @@ h2{
 section {
   padding-top: 75px;
   padding-bottom: 75px;
+  min-height: 100vh;
 }
 
 #home{
@@ -76,13 +77,13 @@ section {
   overflow-y: hidden;
 }
 
-#about, #contact  {
+#about, #projects {
   background-color: white;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-#projects, #blog {
-  background-color: whitesmoke;
+#skills, #contact {
+  background-color: rgb(240, 240, 240);
 }
 
 .landing-btn {
@@ -116,17 +117,94 @@ section {
   /* Full height */
   height: 50px;
   
-  /* Create the parallax scrolling effect */
+  /* Create the par allax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+/* About Section */
+.about-content {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.about-profile {
+  width:100%;
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+
+.about-job {
+  font-size: 20px;
+  margin-bottom: 0px;
+}
+
+.about-name {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.about-desc {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+.about-list {
+  text-align: left;
+  padding-left: 50px;
+}
+
+/* Project Section */
+.proj-box {
+  border: 1px solid gray;
+  border-radius: 5px;
+  max-width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+/* Contact Section */ 
+.bullet-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contact-bullet {
+  height:25px;
+  margin-right: 5px;
+}
+
+.contact-content {
+  margin-left: 15vw;
+  margin-right: 15vw; 
+}
+
+.contact-links {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-main {
+  border: 1px solid gray;
+  border-radius: 5px;
+  max-width: 80vw;
+  text-align: left;
+}
 
 .hero-title {
   font-family: ;
   color: ;
+}
+
+.page-button {
+  font-weight: bold;
+}
+
+.page-button:hover {
+  background-color: purple;
 }
 
 .hero-text {
@@ -158,8 +236,8 @@ section {
 
 .circular {
     border-radius: 50%;
-    /* height: 100px;
-    width: 100px; */
+    height: 200px;
+    width: 200px;
 }
 
 .italic { 
@@ -257,4 +335,33 @@ section {
   height: 10vh;
   background-color: gray;
   width: 100%;
+}
+
+@media screen and (min-width: 600px){
+  .about-content {
+    display: flex;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+}
+
+@media screen and (min-width: 800px){
+  .contact-content {
+    display: flex;
+    margin-left: 15vh;
+    margin-right: 15vh;
+  }
+
+  .contact-links {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 40%;
+  }
+  
+  .contact-main {
+    border: 1px solid gray;
+    border-radius: 5px;
+    text-align: left;
+    width: 60%;
+  }
 }

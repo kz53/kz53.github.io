@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import './styles.css';
 import scrollToComponent from 'react-scroll-to-component';
-import image01 from './assets/profile-pic.jpg';
+import image01 from './assets/profile-pic2.jpg';
 import TopBar from './TopBar/TopBar.js';
 import SkillItem from './SkillItem/SkillItem.js';
 import NavBar from './NavBar/NavBar.js';
@@ -32,7 +32,9 @@ import reduxLogo from './assets/skill-icons/redux-logo.png';
 import rubyLogo from './assets/skill-icons/ruby-logo.png';
 import tensorflowLogo from './assets/skill-icons/tensorflow-logo.png';
 import tsLogo from './assets/skill-icons/ts-logo.png';
-
+import emailIcon from './assets/mini-icons/mail-black.png'
+import linkedinIcon from './assets/mini-icons/linkedin.png'
+import githubIcon from './assets/mini-icons/github.png'
 smoothscroll.polyfill();
 
 function ScrollToButton(props) {
@@ -47,8 +49,8 @@ class App extends React.Component {
   items = [
     {
       img:image01,
-      title:"Fast",
-      text:"Fast load times and lag free interaction, my highest priority",
+      title:"Fullstack Developer",
+      text:"Kelley Zhang",
     },
     {
       img:image01,
@@ -126,28 +128,40 @@ class App extends React.Component {
           <br />
           {/* <div id="landing-navbar" className="landing-navbar">
           </div>  */}
-          
         </section>
         <TopBar refsList={this.refsList} />
         
         {/* <!-- Resume --> */}
         <section ref={this.aboutRef} id="about" className={``}>
           <h2 className='hidden'>About Me</h2>
-          <div className="hidden items-row">
+          {/* <div className="hidden items-row">
             <HexItem data={this.items[0]}></HexItem>
-            {/* <HexItem data={this.items[1]}></HexItem> */}
-            {/* <HexItem data={this.items[2]}></HexItem>
-            <HexItem data={this.items[3]}></HexItem> */}
+          </div> */}
+          <div className="about-content">
+            <div className="about-profile">
+              <img className="circular" src={image01} />        
+              <div className="about-job">Fullstack Developer</div>
+              <div className="about-name">Kel Zhang</div>
+            </div>
+            <div className="about-main">
+              <div className="about-desc">
+                Native Philadelphian with a passion for programming. I've been coding since I was eight and love making cool stuff. I mostly work with React.js and Angular 2+, but have experience all along the stack. I offer:
+              </div>
+              <div className="about-list">
+                <ul>
+                  <li>Fast, Responsive Designs</li>
+                  <li>Intuitive UI/UX</li>
+                  <li>Attention to detail</li>
+                  <li>Creative Problem solving</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <b>Resume</b>
-          <div className="hidden">
-            aa
-          </div>      
         </section>
 
         {/* <!-- Skills --> */}
-        <section ref={this.projectRef} id="projects" className="">
-          <h2 className="hidden">Technologies</h2>
+        <section ref={this.projectRef} id="skills" className="">
+          <h2 className="hidden">Skills</h2>
           <h4 className="hidden">My main skills are:</h4>
           <div className="main-skill-row" >
             <SkillItem className={"ggg hidden"} name="HTML" logo={htmlLogo} />
@@ -175,45 +189,81 @@ class App extends React.Component {
             <SkillItem className="hidden" name="Tensorflow" logo={tensorflowLogo} />
             <SkillItem className="hidden" name="TypeScript" logo={tsLogo} />
           </div>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
         </section>
 
         {/* <!-- Projects --> */}
         <section ref={this.projectRef} id="projects" className="">
           <h2 className="hidden">Projects</h2>
-          <div className="hidden " style={{height: 500+"px"}}>
-            aa
+          <div className="hidden proj-box">
+            Robin-bot
+            <div>
+              Created a platform for placing orders on Robinhood, hosted on an Amazon EC2 instance. Incorporated machine learning to drive decision making process.
+            </div>
+            <div>
+              Highlighted skills:
+              Linux/AWS EC2
+              Python/tensorflow
+              REST API's
+            </div>
+            <div>
+              <button>link</button>
+            </div>
           </div>
-          a
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <div className="hidden proj-box">
+            AniAI
+            <div>
+              A website that incorporates machine learning to provide TV show recommendations based on user inputs and data mined from multiple review sites
+            </div>
+            <div>
+              Highlighted skills:
+              Javascript
+              CSS/Bootstrap
+              REST APIs
+            </div>
+            <div>
+              <button>link</button>
+            </div>
+          </div>
+          <div className="hidden proj-box">
+            CivApp
+          </div>
+          <div className="hidden proj-box">
+            Unity Game Development
+          </div>
+          <div className="hidden proj-box">
+            Meme-bot
+          </div>
         </section>
 
         {/* <!-- Contact --> */}
         <section ref={this.contactRef} id="contact" className="">
           <h2 className="hidden">Contact</h2>
-          <div className="hidden ">
-            <div>
-              E-mail: kz53@cornell.edu
+          <div className="contact-content">
+            <div className="hidden contact-links">
+              <div className="bullet-row">
+                <img className="contact-bullet" src={emailIcon} /> kz53@cornell.edu
+              </div>
+              <div className="bullet-row">
+                <img className="contact-bullet" src={linkedinIcon} /> linkedin.com/in/kelzhang/
+              </div>
+              <div className="bullet-row">
+                <img className="contact-bullet" src={githubIcon} /> github.com/kz53
+              </div>
+              <div>
+                Download CV
+              </div>
             </div>
-            <div>
-              LinkedIn: https://www.linkedin.com/in/kelzhang/
+            <div className="contact-main">
+              I am currently in the market ofr a new job. Interested in working with me? feel free to reach out or view my resume.
+              <div className="flex">
+                <div className="page-button">
+                  View My Resume
+                </div>
+                <div className="page-button">
+                  Get in Touch
+                </div>
+              </div>
             </div>
-            <div>
-              Github: https://github.com/kz53
-            </div>
-            <div>
-              Download CV
-            </div>
-          </div>
-          <div className="flex">
-            <button>View My Resume</button>
-            <button>Get In Touch</button>
           </div>
         </section>
       </div>

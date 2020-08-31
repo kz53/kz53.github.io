@@ -1,6 +1,7 @@
 import React from 'react';
 import './TopBar.css';
 import smoothscroll from 'smoothscroll-polyfill';
+import hbButton from '../assets/hb-button-white.png';
 
 smoothscroll.polyfill();
 
@@ -93,22 +94,24 @@ export default class TopBar extends React.Component {
     return (
       <div className={`topbar ${classHide}`} style={{animation: this.checkIfMobile()?"none":""}}>
         <nav className="navbar" >
-          <div className="hb-button" onClick={()=>{this.toggleMenu()}}>Menu</div>
+          <div className="hb-button" onClick={()=>{this.toggleMenu()}}>
+            <img style={{height:70+'%',}} src={hbButton} />
+          </div>
           <ul className="link-wrap" id="js-menu">
             <li>
-              <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>Home</div>
+              <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>HOME</div>
             </li>
             {/* <li>
               <div className="nav-links" onClick={()=>{console.log(this.SmoothVerticalScrolling(this.props.refsList[1].current, 300, "top"))}}>Resume</div>
             </li> */}
             <li>
-              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[0].current, 300, "top")}}>Skills</div>
+              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[0].current, 300, "top")}}>SKILLS</div>
             </li>
             <li>
-              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[2].current, 300, "top")}}>Projects</div>
+              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[2].current, 300, "top")}}>PROJECTS</div>
             </li>
             <li>
-              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[3].current, 300, "top")}}>Recruiters</div>
+              <div className="nav-links" onClick={()=>{this.SmoothVerticalScrolling(this.props.refsList[3].current, 300, "top")}}>CONTACT</div>
             </li>
 
           </ul>

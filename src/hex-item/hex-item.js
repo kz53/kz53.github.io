@@ -9,8 +9,9 @@ export default class HexItem extends React.Component {
     return(
      <div>
       <img src={this.props.data.img} />
-      <h3>{this.props.data.title }</h3>
-      <p>{this.props.data.text}</p>
+      <br />
+      {this.props.data.title }
+      <h3>{this.props.data.text}</h3>
      </div> 
     )
   }

@@ -40,7 +40,6 @@
   height:100%;  
   background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf   100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
-  padding-bottom: 10px;
   bottom: 0px;
   z-index: 5;
   border-bottom: 3px solid orange;
@@ -81,7 +80,11 @@
 
 
 .hb-button {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 15px;
+  height: 100%;
+  align-items: center;
 }
 
 .hb-menu {
