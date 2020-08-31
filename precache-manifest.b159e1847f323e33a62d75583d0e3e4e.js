@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60d18edf149796034db974df5bda215c",
+    "revision": "c2205934a92812348febab211aea8373",
     "url": "/index.html"
   },
   {
-    "revision": "676a68abb24c79629c3f",
-    "url": "/static/css/main.fc270b80.chunk.css"
+    "revision": "d3ccba05a23b5c400a4d",
+    "url": "/static/css/main.a09beb2c.chunk.css"
   },
   {
-    "revision": "ca296803632d3fd7b705",
-    "url": "/static/js/2.a14aee84.chunk.js"
+    "revision": "5df002417577f5141b50",
+    "url": "/static/js/2.64c32ee3.chunk.js"
   },
   {
     "revision": "85b12af60ddf57ea6860c3b16407fd52",
-    "url": "/static/js/2.a14aee84.chunk.js.LICENSE"
+    "url": "/static/js/2.64c32ee3.chunk.js.LICENSE"
   },
   {
-    "revision": "676a68abb24c79629c3f",
-    "url": "/static/js/main.d23a783c.chunk.js"
+    "revision": "d3ccba05a23b5c400a4d",
+    "url": "/static/js/main.3d3dd62e.chunk.js"
   },
   {
     "revision": "b8d81126cfea448e0658",
@@ -48,6 +48,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/d3-logo.043ff197.png"
   },
   {
+    "revision": "9282a65de22d0da6c8e712467df7433b",
+    "url": "/static/media/hb-button-white.9282a65d.png"
+  },
+  {
     "revision": "b31800b962d222f3d7874719d9b990be",
     "url": "/static/media/html-logo.b31800b9.png"
   },
@@ -64,6 +68,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.ee7cd8ed.svg"
   },
   {
+    "revision": "ad3eb307680b1f48d3bab077a46e04a8",
+    "url": "/static/media/mail-black.ad3eb307.png"
+  },
+  {
     "revision": "fd69b1fc0b55912f29a19e1704c430bc",
     "url": "/static/media/mongodb-logo.fd69b1fc.png"
   },
@@ -76,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/nodejs-logo.5b47d4f8.png"
   },
   {
-    "revision": "943002590c0aee7d2d15088d4883fd38",
-    "url": "/static/media/profile-pic.94300259.jpg"
+    "revision": "5a02980841f243c82270ab42d075f9dd",
+    "url": "/static/media/profile-pic2.5a029808.jpg"
   },
   {
     "revision": "d59adf22e51394e26cb536ec63102e2f",
