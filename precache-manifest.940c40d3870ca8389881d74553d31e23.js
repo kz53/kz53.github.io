@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c2205934a92812348febab211aea8373",
+    "revision": "c98a9264b76657d9cb1c78320ed2c8b8",
     "url": "/index.html"
   },
   {
-    "revision": "d3ccba05a23b5c400a4d",
-    "url": "/static/css/main.a09beb2c.chunk.css"
+    "revision": "7b22f50541c23462f3f4",
+    "url": "/static/css/main.d24cd771.chunk.css"
   },
   {
-    "revision": "5df002417577f5141b50",
-    "url": "/static/js/2.64c32ee3.chunk.js"
+    "revision": "52161c4c3baba22d0e97",
+    "url": "/static/js/2.b5edc3aa.chunk.js"
   },
   {
     "revision": "85b12af60ddf57ea6860c3b16407fd52",
-    "url": "/static/js/2.64c32ee3.chunk.js.LICENSE"
+    "url": "/static/js/2.b5edc3aa.chunk.js.LICENSE"
   },
   {
-    "revision": "d3ccba05a23b5c400a4d",
-    "url": "/static/js/main.3d3dd62e.chunk.js"
+    "revision": "7b22f50541c23462f3f4",
+    "url": "/static/js/main.c4136ea3.chunk.js"
   },
   {
     "revision": "b8d81126cfea448e0658",
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/angular-logo.1a632d2b.png"
   },
   {
-    "revision": "b4597ef3041410d11360b8d7e66616b8",
-    "url": "/static/media/aws-words.b4597ef3.png"
+    "revision": "6bb0fcd0d3f00077892b74ffebad764f",
+    "url": "/static/media/aws-words.6bb0fcd0.png"
   },
   {
     "revision": "2df50bf0be6c5ebe6960fe91cf9ed741",
@@ -48,6 +48,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/d3-logo.043ff197.png"
   },
   {
+    "revision": "10367ddbf650e8d507a4da82bc8e7964",
+    "url": "/static/media/github.10367ddb.png"
+  },
+  {
+    "revision": "d224cc270a335d905733408bee6abf4e",
+    "url": "/static/media/graphql-logo.d224cc27.png"
+  },
+  {
     "revision": "9282a65de22d0da6c8e712467df7433b",
     "url": "/static/media/hb-button-white.9282a65d.png"
   },
@@ -56,8 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/html-logo.b31800b9.png"
   },
   {
-    "revision": "12622ad15c1f191e3a9e2d31e767d241",
-    "url": "/static/media/java-logo.12622ad1.png"
+    "revision": "10face32f6ce4a17ee7e3e4ea552ddac",
+    "url": "/static/media/java-logo.10face32.png"
   },
   {
     "revision": "50a67f1cbe0f46b4cd999a8d083155bc",
@@ -68,28 +76,32 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.ee7cd8ed.svg"
   },
   {
-    "revision": "ad3eb307680b1f48d3bab077a46e04a8",
-    "url": "/static/media/mail-black.ad3eb307.png"
+    "revision": "81374415de428d378bb3f9d6748c6656",
+    "url": "/static/media/mail-black-2.81374415.png"
   },
   {
     "revision": "fd69b1fc0b55912f29a19e1704c430bc",
     "url": "/static/media/mongodb-logo.fd69b1fc.png"
   },
   {
-    "revision": "be860bebcdc1d4f2028903a64ee4c345",
-    "url": "/static/media/mysql-logo.be860beb.png"
+    "revision": "e901c16092e30a6f35f88adfb039315d",
+    "url": "/static/media/mysql-logo.e901c160.png"
   },
   {
     "revision": "5b47d4f8d197911857e8e77cb4dd1569",
     "url": "/static/media/nodejs-logo.5b47d4f8.png"
   },
   {
-    "revision": "5a02980841f243c82270ab42d075f9dd",
-    "url": "/static/media/profile-pic2.5a029808.jpg"
+    "revision": "19c011a361a2e5f709cf75f8a6d176e7",
+    "url": "/static/media/profile-pic-2.19c011a3.jpg"
   },
   {
-    "revision": "d59adf22e51394e26cb536ec63102e2f",
-    "url": "/static/media/python-logo.d59adf22.png"
+    "revision": "b9bbb1d722d3ef6ebf7d573703b5925e",
+    "url": "/static/media/python-logo.b9bbb1d7.png"
+  },
+  {
+    "revision": "0f9a24f94d1b99da73d91a1a2f6356fe",
+    "url": "/static/media/rails-logo.0f9a24f9.png"
   },
   {
     "revision": "638be90904f9f9248d3c69cb2992c562",
@@ -106,6 +118,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "40e7dec37da412070bb317047cce9b8f",
     "url": "/static/media/stars.40e7dec3.jpeg"
+  },
+  {
+    "revision": "7582e6bab781ca859c57207631914037",
+    "url": "/static/media/swift-logo.7582e6ba.png"
   },
   {
     "revision": "65313c11ebb49ee16de81f4d2be8332e",
