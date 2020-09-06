@@ -13,6 +13,9 @@ https://mxstbr.com/
 https://www.lowmess.com/
 https://react-ladoli.netlify.app/ 
 
+
+https://coolors.co/f3f6f6-cf995f-393d3f 
+
 <section>
     HOME
 </section>

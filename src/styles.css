@@ -4,6 +4,10 @@
     margin: 0;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
 @keyframes fade-in {
   0% {
     transform: scale(.7,.7);
@@ -31,7 +35,7 @@
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #333333;    
   background-color: rgba(255, 255, 255, 0.7);
   min-width:280px;       
@@ -45,7 +49,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: ;
+  font-family: 'Raleway';
   color: black;
   
 }
@@ -60,7 +64,7 @@ h2{
 }
 
 .slide{
-  animation: fade-in 1.0s;
+  animation: fade-in .25s;
 }
 
 section {
@@ -71,7 +75,7 @@ section {
 
 #home{
   z-index: 2;
-  background-color: gray;
+  background-color: rgb(255, 213, 25);
   height: 100vh;
   margin-bottom: 75px;
   overflow-y: hidden;
@@ -88,13 +92,25 @@ section {
 
 .landing-btn {
   /* background-color: darkgray; */
-  background-color: darkgray;
+  background-color: transparent;
+  border: 3px solid whitesmoke;
+  color: whitesmoke;
+  font-weight: bold;
   height: 50px;
-  width: 70px; 
+  /* width: 140px;  */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:70%;
 }
 
 .landing-btn:hover {
-  background-color: maroon;
+  background-color: orange;
+}
+
+.landing-btn:active {
+  opacity: .5;
 }
 
 .fade-in-section {
@@ -122,6 +138,36 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Home Section */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+}
+
+.home-box {
+  position: absolute;
+  top: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Raleway';
+}
+
+.home-1 {
+
+}
+
+.home-2 {
+  margin-bottom: 15px;
+}
+
+.home-button {
+  font-size: 5px !important;
 }
 
 /* About Section */
@@ -157,12 +203,42 @@ section {
 }
 
 /* Project Section */
+.proj-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* flex-direction: column;
+  align-items: center; */
+}
+
 .proj-box {
   border: 1px solid gray;
   border-radius: 5px;
-  max-width: 80vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  width: 45%;
+  min-width: 300px;
+  /* max-width: 500px; */
+  /* margin-left: 10vw;
+  margin-right: 10vw; */
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.proj-title {
+  color: black;
+  font-weight: bold;
+}
+
+.proj-text {
+  color: black;
+}
+
+.proj-hr {
+  border-top: 1px solid orange;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 /* Contact Section */ 
@@ -221,7 +297,7 @@ section {
 
 .extra-skill-row {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   margin-bottom: 50px;
   flex-wrap: wrap;
 }
