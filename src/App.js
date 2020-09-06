@@ -211,68 +211,68 @@ class App extends React.Component {
                 Python/tensorflow
                 REST API's
               </div>
-              <div>
+              {/* <div>
                 <button>link</button>
-              </div>
+              </div> */}
             </div>
             <div className="hidden proj-box">
               <p className="proj-title">AniAI</p>
               <hr className="proj-hr" />
               <p className="proj-text">
-                A website that incorporates machine learning to provide TV show recommendations based on user inputs and data mined from multiple review sites
+                A website that incorporates machine learning to provide TV show recommendations based on user inputs and data mined from multiple review sites.
               </p>
-              <div>
+              {/* <div>
                 Highlighted skills:
                 Javascript
                 CSS/Bootstrap
                 REST APIs
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <button>link</button>
-              </div>
+              </div> */}
             </div>
             <div className="hidden proj-box">
               <p className="proj-title">Civ App</p>
               <hr className="proj-hr" />
               <p className="proj-text">
-                Created a platform for hosting various productivity apps, with UI based on Civilization VI
+                Created a platform for hosting various productivity apps, with a UI based on that of Civilization VI.
               </p>
-              <div>
+              {/* <div>
                 Highlighted skills:
 
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <button>link</button>
-              </div>
+              </div> */}
             </div>
             <div className="hidden proj-box">
               <p className="proj-title">Unity</p>
               <hr className="proj-hr" />
               <p className="proj-text">
-                Worked on team to create mobile platformer game.
+                Worked on a team to create mobile platformer game.
               </p>
-              <div>
+              {/* <div>
                 Highlighted skills:
 
 
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <button>link</button>
-              </div>
+              </div> */}
             </div>
             <div className="hidden proj-box">
               <p className="proj-title">Meme-bot</p>
               <hr className="proj-hr" />
               <p className="proj-text">
-                Application for sending pictures in png or jpg format to multiple people at once on facebook messenger.
+                Application for sending pictures in .png or .jpg format to multiple people at once on facebook messenger.
               </p>
-              <div>
+              {/* <div>
                 Highlighted skills:
 
-              </div>
-              <div>
+              </div> */}
+              {/* <div>
                 <button>link</button>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -293,12 +293,9 @@ class App extends React.Component {
               </div>
             </div>
             <div className="contact-main">
-              I am currently in the market ofr a new job. Interested in working with me? feel free to reach out or view my resume.
-              <div className="flex">
-                <div className="page-button">
-                  View My Resume
-                </div>
-                <div className="page-button">
+              I am currently open to new opportunities. Interested in working with me? Feel free to send a message.
+              <div className="contact-button-row">
+                <div className="contact-button" onClick={()=>window.open('https://www.linkedin.com/in/kelzhang/', '_blank')}>
                   Get in Touch
                 </div>
               </div>

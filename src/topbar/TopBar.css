@@ -70,7 +70,7 @@
 
 .hb-show{
   display: block;
-  height: 100px;
+  height: 110px;
   transition: height .25s;
 }
 
@@ -136,6 +136,7 @@
   }
   .nav-links {
     margin-left: 40px;
+    cursor: pointer;
   }
   .nav-links, .logo{
     display: block;
