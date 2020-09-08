@@ -167,11 +167,11 @@ class App extends React.Component {
           <h2 className="hidden">Skills</h2>
           <h4 className="hidden">My main skills are:</h4>
           <div className="main-skill-row" >
-            <SkillItem className={"ggg hidden"} name="HTML" logo={htmlLogo} />
-            <SkillItem className={"ggg hidden"} name="CSS" logo={cssLogo} />
-            <SkillItem className={"ggg hidden"} name="JS" logo={jsLogo} />
-            <SkillItem className={"ggg hidden"} name="React" logo={reactLogo} />
-            <SkillItem className={"ggg hidden"} name="Angular" logo={angularLogo} />
+            <SkillItem className={"hidden"} name="HTML" logo={htmlLogo} />
+            <SkillItem className={"hidden"} name="CSS" logo={cssLogo} />
+            <SkillItem className={"hidden"} name="JS" logo={jsLogo} />
+            <SkillItem className={"hidden"} name="React" logo={reactLogo} />
+            <SkillItem className={"hidden"} name="Angular" logo={angularLogo} />
             <SkillItem className="hidden" name="Python" logo={pythonLogo} />
           </div>
           <h4 className="hidden">I also have experience with:</h4>
@@ -293,7 +293,7 @@ class App extends React.Component {
                   <img className="contact-bullet" src={githubIcon} /> github.com/kz53
                 </div>
               </div>
-              <div className="contact-main">
+              <div className="hidden contact-main">
                 <div>
                   I am currently <b>open</b> to new opportunities. Interested in working with me? Feel free to send a message!
                 </div>
