@@ -211,6 +211,7 @@ section {
   flex-wrap: wrap;
   /* flex-direction: column;
   align-items: center; */
+  max-width: 900px;
 }
 
 .proj-box {
@@ -459,7 +460,7 @@ section {
   .contact-content {
     display: flex;
     justify-content: space-evenly;
-    max-width: 1000px;
+    max-width: 800px;
   }
 
   .contact-links {
