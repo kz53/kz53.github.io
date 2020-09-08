@@ -452,6 +452,7 @@ section {
     display: flex;
     padding-left: 5vw;
     padding-right: 5vw;
+    max-width: 800px;
   }
 }
 
