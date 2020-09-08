@@ -205,6 +205,13 @@ section {
 }
 
 /* Project Section */
+
+#project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .proj-container {
   display: flex;
   justify-content: space-evenly;
