@@ -33,7 +33,7 @@ import rubyLogo from './assets/skill-icons/ruby-logo.png';
 import swiftLogo from './assets/skill-icons/swift-logo.png';
 import tensorflowLogo from './assets/skill-icons/tensorflow-logo.png';
 import tsLogo from './assets/skill-icons/ts-logo.png';
-import emailIcon from './assets/mini-icons/mail-black-2.png';
+import emailIcon from './assets/mini-icons/mail-black.png';
 import linkedinIcon from './assets/mini-icons/linkedin.png';
 import githubIcon from './assets/mini-icons/github.png';
 smoothscroll.polyfill();
@@ -293,7 +293,9 @@ class App extends React.Component {
               </div>
             </div>
             <div className="contact-main">
-              I am currently open to new opportunities. Interested in working with me? Feel free to send a message!
+              <div>
+                I am currently <b>open</b> to new opportunities. Interested in working with me? Feel free to send a message!
+              </div>
               <div className="contact-button-row">
                 <div className="contact-button" onClick={()=>window.open('https://www.linkedin.com/in/kelzhang/', '_blank')}>
                   Get in Touch
