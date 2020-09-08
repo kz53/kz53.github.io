@@ -280,25 +280,27 @@ class App extends React.Component {
         {/* <!-- Contact --> */}
         <section ref={this.contactRef} id="contact" className="">
           <h2 className="hidden">Contact</h2>
-          <div className="contact-content">
-            <div className="hidden contact-links">
-              <div className="bullet-row">
-                <img className="contact-bullet" src={emailIcon} /> kz53@cornell.edu
+          <div className="contact-box">
+            <div className="contact-content">
+              <div className="hidden contact-links">
+                <div className="bullet-row">
+                  <img className="contact-bullet" src={emailIcon} /> kz53@cornell.edu
+                </div>
+                <div className="bullet-row">
+                  <img className="contact-bullet" src={linkedinIcon} /> linkedin.com/in/kelzhang/
+                </div>
+                <div className="bullet-row">
+                  <img className="contact-bullet" src={githubIcon} /> github.com/kz53
+                </div>
               </div>
-              <div className="bullet-row">
-                <img className="contact-bullet" src={linkedinIcon} /> linkedin.com/in/kelzhang/
-              </div>
-              <div className="bullet-row">
-                <img className="contact-bullet" src={githubIcon} /> github.com/kz53
-              </div>
-            </div>
-            <div className="contact-main">
-              <div>
-                I am currently <b>open</b> to new opportunities. Interested in working with me? Feel free to send a message!
-              </div>
-              <div className="contact-button-row">
-                <div className="contact-button" onClick={()=>window.open('https://www.linkedin.com/in/kelzhang/', '_blank')}>
-                  Get in Touch
+              <div className="contact-main">
+                <div>
+                  I am currently <b>open</b> to new opportunities. Interested in working with me? Feel free to send a message!
+                </div>
+                <div className="contact-button-row">
+                  <div className="contact-button" onClick={()=>window.open('https://www.linkedin.com/in/kelzhang/', '_blank')}>
+                    Get in Touch
+                  </div>
                 </div>
               </div>
             </div>
