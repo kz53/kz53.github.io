@@ -218,6 +218,7 @@ section {
   border-radius: 5px;
   width: 45%;
   min-width: 300px;
+  max-width: 450px;
   /* max-width: 500px; */
   /* margin-left: 10vw;
   margin-right: 10vw; */
@@ -453,7 +454,7 @@ section {
   .contact-content {
     display: flex;
     justify-content: space-evenly;
-    max-width: 800;
+    max-width: 800px;
   }
 
   .contact-links {
