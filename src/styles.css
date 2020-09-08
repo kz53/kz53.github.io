@@ -465,7 +465,7 @@ section {
   .contact-content {
     display: flex;
     justify-content: space-evenly;
-    max-width: 800px;
+    max-width: 900px;
   }
 
   .contact-links {
