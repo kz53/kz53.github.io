@@ -293,7 +293,7 @@ class App extends React.Component {
               </div>
             </div>
             <div className="contact-main">
-              I am currently open to new opportunities. Interested in working with me? Feel free to send a message.
+              I am currently open to new opportunities. Interested in working with me? Feel free to send a message!
               <div className="contact-button-row">
                 <div className="contact-button" onClick={()=>window.open('https://www.linkedin.com/in/kelzhang/', '_blank')}>
                   Get in Touch
