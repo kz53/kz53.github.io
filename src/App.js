@@ -205,12 +205,12 @@ class App extends React.Component {
               <p className="proj-text">
                 Created a platform for placing orders on Robinhood, hosted on an Amazon EC2 instance. Incorporated machine learning to drive decision making process.
               </p>
-              <div>
+              {/* <div>
                 Highlighted skills:
                 Linux/AWS EC2
                 Python/tensorflow
                 REST API's
-              </div>
+              </div> */}
               {/* <div>
                 <button>link</button>
               </div> */}
