@@ -124,7 +124,7 @@ class App extends React.Component {
         <section ref={this.homeRef} id="home" className="flex-vert" >
           <div className="home-container">
             <div className="home-box">
-              <div className="home-1">Hello! My name is <b>Kel Zhang</b>.</div>
+              <div className="home-1"><span className="home-hilite">Hello!</span> My name is <span className="home-hilite">Kel Zhang</span></div>
               <div className="home-2">I'm a web developer.</div>
               <div className="landing-btn" onClick={()=>{this.smoothVerticalScrolling(this.aboutRef.current, 275, "top")}} >
                 Get To Know Me

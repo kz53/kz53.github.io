@@ -73,14 +73,6 @@ section {
   min-height: 100vh;
 }
 
-#home{
-  z-index: 2;
-  background-color: rgb(255, 213, 25);
-  height: 100vh;
-  margin-bottom: 75px;
-  overflow-y: hidden;
-}
-
 #about, #projects {
   background-color: white;
   display: flex;
@@ -145,6 +137,21 @@ section {
 }
 
 /* Home Section */
+#home{
+  z-index: 2;
+  /* background-color: rgb(255, 213, 25); */
+  background-color: #1b242f;
+  color: #C33149;
+  height: 100vh;
+  margin-bottom: 75px;
+  overflow-y: hidden;
+}
+
+.home-hilite {
+  font-weight: white;
+  color: white;
+}
+
 .home-container {
   display: flex;
   justify-content: center;
